@@ -34,32 +34,42 @@ Route::get('/register', function () {
 
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
-Route::get('/forgot-password', function () {
-    return view('auth.forgotpass');
-})->name('forgot-password');
+// Route::middleware('auth')->group(function () {
+//     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+// });
+
+// Route::get('/picket', [PicketController::class, 'index'])->name('picket');
+
+// Route::get('/calendar', action: function(){
+//     return view('main.calendar');
+// })->name('calendar');
+
+// Route::get('/calendar', [App\Http\Controllers\CalendarController::class, 'index'])->name('calendar');
+
+// Route::get('/notification', action: function(){
+//     return view('main.notification');
+// })->name('notification');
+
+// Route::get('/profile', action: function(){
+//     return view('main.profile');
+// })->name('profile');
+
+// Route::post('/profile', [ProfileController::class, 'updateImage'])->name('profile.updateImage');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::get('/calendar', [CalendarController::class, 'index'])->name('calendar');
+
+    Route::get('/picket', [PicketController::class, 'index'])->name('picket');
+
+    Route::get('/notification', function() {
+        return view('main.notification');
+    })->name('notification');
+
+    Route::get('/profile', function() {
+        return view('main.profile');
+    })->name('profile');
+
+    Route::post('/profile', [ProfileController::class, 'updateImage'])->name('profile.updateImage');
 });
-
-// Route::get('/picket', action: function(){
-//     return view('main.picket');
-// })->name('picket');
-
-Route::get('/picket', [PicketController::class, 'index'])->name('picket');
-
-Route::get('/calendar', action: function(){
-    return view('main.calendar');
-})->name('calendar');
-
-Route::get('/calendar', [App\Http\Controllers\CalendarController::class, 'index'])->name('calendar');
-
-Route::get('/notification', action: function(){
-    return view('main.notification');
-})->name('notification');
-
-Route::get('/profile', action: function(){
-    return view('main.profile');
-})->name('profile');
-
-Route::post('/profile', [ProfileController::class, 'updateImage'])->name('profile.updateImage');

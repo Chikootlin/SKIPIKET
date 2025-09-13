@@ -50,10 +50,6 @@
                 alt="Password Icon"
             />
 
-            <div class="flex justify-end -mt-1">
-                <a href="{{ route('forgot-password') }}" class="text-sm text-[#5370FF] hover:underline">Forgot password?</a>
-            </div>
-
             <x-auth.button-auth type="submit">
                 Continue
             </x-auth.button-auth>
