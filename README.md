@@ -60,7 +60,6 @@ SKIPIKET adalah aplikasi web untuk **mengelola jadwal piket kelas** di Sekolah K
 - Node.js & npm (untuk Tailwind CSS)
 
 ### Langkah-langkah
-sdada
 
 ```bash
 # 1. Clone repository
