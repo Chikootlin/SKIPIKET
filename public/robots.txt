@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: SKICTF{1_4m_4_r0b0t}
