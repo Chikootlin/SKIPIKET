@@ -100,9 +100,11 @@ php artisan serve
 
 - Aplikasi ini masih **percobaan**, dibuat oleh murid sekolah. Mohon maklum jika ada kekurangan.  
 - Data user diisi oleh admin; user tidak bisa sembarangan mengubah info.  
-- Jadwal piket di-generate otomatis setiap bulan untuk mempermudah manajemen.  
-- ❗ Jika ada kekeliruan atau bug, silakan hubungi saya melalui **Discord**: `Username#1234`
-
+- Jadwal piket di-generate otomatis setiap bulan untuk mempermudah manajemen.
+-Jika ingin jalankan sistem generate tugas maka jalankan command
+```bash
+ php artisan picket:generate [id_class] --month=[nomor bulan] --year=[tahun piket] --perDay=[1 hari berapa orang]
+```
 ---
 
 ## 📬 Kontak / Feedback
